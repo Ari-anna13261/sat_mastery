@@ -2,29 +2,63 @@ import { auth, onAuthStateChanged, signOut } from "./firebase.js";
 
 const welcome = document.getElementById("welcomeMessage");
 const logoutBtn = document.getElementById("logoutBtn");
+const startPracticeBtn = document.getElementById("startPracticeBtn");
 
 onAuthStateChanged(auth, (user) => {
 
     if (user) {
 
-        welcome.textContent = `👋 Welcome back, ${user.displayName}!`;
+        if (welcome) {
+            welcome.textContent = `👋 Welcome back, ${user.displayName}!`;
+        }
 
-        logoutBtn.style.display = "inline-block";
+        if (logoutBtn) {
+            logoutBtn.style.display = "inline-block";
+        }
 
     } else {
 
-        welcome.textContent = "👋 Welcome to SAT Mastery!";
+        if (welcome) {
+            welcome.textContent = "👋 Welcome to SAT Mastery!";
+        }
 
-        logoutBtn.style.display = "none";
+        if (logoutBtn) {
+            logoutBtn.style.display = "none";
+        }
+
+    }
+
+    // Smart Start Practicing button
+    if (startPracticeBtn) {
+
+        startPracticeBtn.addEventListener("click", (e) => {
+
+            e.preventDefault();
+
+            if (user) {
+
+                window.location.href = "practice.html";
+
+            } else {
+
+                window.location.href = "login.html";
+
+            }
+
+        });
 
     }
 
 });
 
-logoutBtn.addEventListener("click", async () => {
+if (logoutBtn) {
 
-    await signOut(auth);
+    logoutBtn.addEventListener("click", async () => {
 
-    window.location.href = "login.html";
+        await signOut(auth);
 
-});
+        window.location.href = "login.html";
+
+    });
+
+}
