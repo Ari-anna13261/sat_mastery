@@ -338,3 +338,57 @@ padding:70px 30px;
 text-align:center;
 
 }
+
+/* ==========================
+   College Board Section
+========================== */
+
+.collegeboard-section{
+    width:100%;
+    padding:80px 20px;
+    background:#eef5ff;
+    text-align:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.collegeboard-section h2{
+    font-size:40px;
+    color:#1565c0;
+    margin-bottom:20px;
+}
+
+.collegeboard-section p{
+    max-width:800px;
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.collegeboard-card{
+    background:white;
+    width:100%;
+    max-width:750px;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    text-align:center;
+}
+
+.collegeboard-card h3{
+    color:#1565c0;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.collegeboard-card p{
+    margin-bottom:30px;
+}
+
+.collegeboard-card .button{
+    display:inline-block;
+}
