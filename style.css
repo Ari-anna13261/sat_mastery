@@ -392,3 +392,57 @@ text-align:center;
 .collegeboard-card .button{
     display:inline-block;
 }
+
+.login-box{
+
+display:flex;
+flex-direction:column;
+gap:20px;
+
+max-width:450px;
+
+margin:auto;
+
+margin-top:40px;
+
+}
+
+.login-box input{
+
+padding:18px;
+
+font-size:18px;
+
+border-radius:12px;
+
+border:2px solid #ddd;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+.login-box input:focus{
+
+border-color:#1565c0;
+
+}
+
+.login-box button{
+
+width:100%;
+
+}
+
+#message{
+
+font-size:18px;
+
+font-weight:bold;
+
+margin-top:20px;
+
+text-align:center;
+
+}

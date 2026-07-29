@@ -1,31 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Login | SAT Mastery</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+<header>
+
+<div class="logo">📘 SAT Mastery</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="practice.html">Practice</a>
+<a href="dashboard.html">Dashboard</a>
+
+</nav>
+
+</header>
+
 <section class="hero">
 
-<h1>Welcome Back</h1>
+<div class="hero-text">
 
-<p>Log in to continue studying.</p>
+<h1>Welcome to SAT Mastery</h1>
 
-<input type="text" placeholder="Username">
+<p>
+Create an account to save your scores,
+track your progress,
+and unlock your SAT Power Pack.
+</p>
 
-<br><br>
+<div class="login-box">
 
-<input type="password" placeholder="Password">
+<input id="name" type="text" placeholder="Full Name">
 
-<br><br>
+<input id="email" type="email" placeholder="Email Address">
 
-<button>Log In</button>
+<input id="password" type="password" placeholder="Password">
+
+<button class="button" id="signupBtn">
+Create Account
+</button>
+
+<button class="button" id="loginBtn">
+Log In
+</button>
+
+<p id="message"></p>
+
+</div>
+
+</div>
 
 </section>
 
+<script type="module" src="login.js"></script>
+
 </body>
+
 </html>
