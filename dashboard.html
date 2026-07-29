@@ -1,82 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Dashboard | SAT Mastery</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">SAT Mastery</div>
+<div class="logo">📘 SAT Mastery</div>
 
 <nav>
+
 <a href="index.html">Home</a>
 <a href="reading.html">Reading</a>
 <a href="grammar.html">Grammar</a>
 <a href="math.html">Math</a>
 <a href="practice.html">Practice</a>
 <a href="dashboard.html">Dashboard</a>
-<a href="about.html">About</a>
 <a href="studyplanner.html">Study Planner</a>
 <a href="vocabulary.html">Vocabulary</a>
-<a href="login.html">Login</a>
+<a href="about.html">About</a>
+
 </nav>
 
 </header>
 
 <section class="hero">
 
-<h1>Your SAT Dashboard</h1>
+<h1 id="welcomeName">Welcome!</h1>
 
-<p>Track your progress as you prepare for test day.</p>
+<p>Your personalized SAT progress dashboard.</p>
 
 </section>
 
 <section class="features">
 
 <div class="feature">
+
 <h2>🎯 Estimated SAT Score</h2>
 
 <h1 id="estimatedScore">400</h1>
-<p>Keep practicing to raise your score!</p>
+
+<p>Your score updates automatically.</p>
+
 </div>
 
 <div class="feature">
-<h2>📚 Lessons Completed</h2>
-<h1>3</h1>
-<p>Reading, Grammar, and Math</p>
+
+<h2>🏆 SAT Power Pack</h2>
+
+<h1 id="powerPack">0%</h1>
+
+<p>Complete lessons to reach 100%.</p>
+
 </div>
 
 <div class="feature">
+
 <h2>🔥 Study Streak</h2>
-<h1>1 Day</h1>
-<p>Study every day to build a streak!</p>
+
+<h1 id="streak">0 Days</h1>
+
+<p>Study daily to build your streak.</p>
+
+</div>
+
+<div class="feature">
+
+<h2>📚 Questions Completed</h2>
+
+<h1 id="questionsCompleted">0</h1>
+
+<p>Every practice question counts.</p>
+
 </div>
 
 </section>
 
 <section class="hero">
 
-<h2>Overall Progress</h2>
+<h2>Subject Progress</h2>
 
-<p>Reading</p>
-<progress value="40" max="100"></progress>
+<p>📖 Reading</p>
 
-<br><br>
-
-<p>Grammar</p>
-<progress value="35" max="100"></progress>
+<progress id="readingProgress" value="0" max="100"></progress>
 
 <br><br>
 
-<p>Math</p>
-<progress value="30" max="100"></progress>
+<p>✍️ Grammar</p>
+
+<progress id="grammarProgress" value="0" max="100"></progress>
+
+<br><br>
+
+<p>➗ Math</p>
+
+<progress id="mathProgress" value="0" max="100"></progress>
 
 </section>
-<script src="dashboard.js"></script>
+
+<section class="hero">
+
+<h2>Today's Goal</h2>
+
+<ul class="goal-list">
+
+<li>✅ Complete one Reading lesson</li>
+
+<li>⬜ Finish one Math practice set</li>
+
+<li>⬜ Learn 10 vocabulary words</li>
+
+</ul>
+
+</section>
+
+<script type="module" src="dashboard.js"></script>
+
 </body>
+
 </html>

@@ -1,16 +1,50 @@
-const score = localStorage.getItem("score") || 0;
-const total = localStorage.getItem("total") || 0;
+import {
+    auth,
+    db,
+    doc,
+    getDoc,
+    onAuthStateChanged
+} from "./firebase.js";
 
-if(document.getElementById("estimatedScore")){
+onAuthStateChanged(auth, async (user) => {
 
-let percent = 0;
+    if (!user) {
 
-if(total > 0){
-    percent = Math.round((score/total)*100);
-}
+        window.location.href = "login.html";
+        return;
 
-let satScore = 400 + Math.round(percent * 12);
+    }
 
-document.getElementById("estimatedScore").innerHTML = satScore;
+    document.getElementById("welcomeName").textContent =
+        `Welcome back, ${user.displayName}!`;
 
-}
+    const ref = doc(db, "students", user.uid);
+
+    const snap = await getDoc(ref);
+
+    if (!snap.exists()) return;
+
+    const data = snap.data();
+
+    document.getElementById("estimatedScore").textContent =
+        data.estimatedSAT;
+
+    document.getElementById("powerPack").textContent =
+        data.powerPack + "%";
+
+    document.getElementById("streak").textContent =
+        data.streak + " Days";
+
+    document.getElementById("questionsCompleted").textContent =
+        data.quizzesCompleted;
+
+    document.getElementById("readingProgress").value =
+        data.readingScore;
+
+    document.getElementById("grammarProgress").value =
+        data.grammarScore;
+
+    document.getElementById("mathProgress").value =
+        data.mathScore;
+
+});

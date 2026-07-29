@@ -409,6 +409,8 @@ margin-top:40px;
 
 .login-box input{
 
+width:100%;
+
 padding:18px;
 
 font-size:18px;
@@ -427,6 +429,8 @@ transition:.3s;
 
 border-color:#1565c0;
 
+box-shadow:0 0 8px rgba(21,101,192,.2);
+
 }
 
 .login-box button{
@@ -444,5 +448,97 @@ font-weight:bold;
 margin-top:20px;
 
 text-align:center;
+
+line-height:1.5;
+
+}
+
+/* Password */
+
+.password-container{
+
+position:relative;
+
+width:100%;
+
+}
+
+.password-container input{
+
+width:100%;
+
+padding-right:60px;
+
+}
+
+.eye-icon{
+
+position:absolute;
+
+top:50%;
+
+right:20px;
+
+transform:translateY(-50%);
+
+font-size:22px;
+
+color:#666;
+
+cursor:pointer;
+
+z-index:100;
+
+transition:.3s;
+
+}
+
+.eye-icon:hover{
+
+color:#1565c0;
+
+}
+
+/* Secondary Buttons */
+
+.secondary-btn{
+
+background:#666;
+
+margin-top:10px;
+
+}
+
+.secondary-btn:hover{
+
+background:#444;
+
+}
+
+/* Email Help Box */
+
+.email-help{
+
+margin-top:25px;
+
+padding:18px;
+
+background:#f7f9fc;
+
+border:1px solid #d8e5f7;
+
+border-radius:12px;
+
+font-size:15px;
+
+line-height:1.7;
+
+color:#444;
+
+}
+
+.email-help strong{
+
+color:#1565c0;
 
 }
